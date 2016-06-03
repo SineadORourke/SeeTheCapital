@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sinead.seethecapital.MainMenu"
+    android:background="@mipmap/main_bg">
+
+    <Button
+        android:layout_width="215dp"
+        android:layout_height="60dp"
+        android:id="@+id/bankButton"
+        android:typeface="monospace"
+        android:textSize="20dp"
+        android:onClick="toBankActivity"
+        android:textColor="#000000"
+        android:contextClickable="false"
+        android:visibility="visible"
+        android:text="Your Bank a/c"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#ccb49fd1" />
+
+    <Button
+        android:layout_width="215dp"
+        android:layout_height="60dp"
+        android:id="@+id/addHolidayButton"
+        android:typeface="monospace"
+        android:textSize="20dp"
+        android:onClick="toAddHolidayActivity"
+        android:textColor="#000000"
+        android:visibility="visible"
+        android:text="Add New Holiday"
+        android:layout_above="@+id/deleteHolidayButton"
+        android:layout_alignLeft="@+id/deleteHolidayButton"
+        android:layout_alignStart="@+id/deleteHolidayButton"
+        android:background="#ccb49fd1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+    <ListView
+        android:layout_width="275dp"
+        android:layout_height="100dp"
+        android:id="@+id/showHoliday"
+        android:backgroundTint="#ffffff"
+        android:cacheColorHint="#ffffff"
+        android:layout_above="@+id/addHolidayButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="215dp"
+        android:layout_height="60dp"
+        android:id="@+id/deleteHolidayButton"
+        android:typeface="monospace"
+        android:textSize="20dp"
+        android:onClick="toDeleteHolidayActivity"
+        android:textColor="#000000"
+        android:visibility="visible"
+        android:text="Delete Holiday"
+        android:layout_above="@+id/bankButton"
+        android:layout_alignLeft="@+id/bankButton"
+        android:layout_alignStart="@+id/bankButton"
+        android:background="#ccb49fd1"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Holidays:"
+        android:id="@+id/textView4"
+        android:textSize="30dp"
+        android:layout_above="@+id/showHoliday"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageButton3"
+        android:background="@mipmap/qmark"
+        android:onClick="menuDialog"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/addHolidayButton"
+        android:layout_toEndOf="@+id/addHolidayButton" />
+
+</RelativeLayout>
+
+
+<!-- Commented by Sinead O'Rourke.
+        This xml file controls the layout of the MainMenu.java activity. It is the first activity that is displayed to the user after the Splash screen.
+        -There is an imageButton in the top right corner. When it is pressed, an alert dialog box appears with information about how to use the app.
+        -The listView displays all the holiday names from the database, and each item in the listView is clickable. When an item is clicked, the user is brought
+        to the Holiday Profile of that selected holiday.
+        -There are three buttons that direct the user to other activities in the app (go to AddHolidayActivity.java, go to DeleteHolidayActivity.java or gp to BankActivity.java) /-->

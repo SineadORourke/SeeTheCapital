@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">SeeTheCapital</string>
+    <string name="title_activity_holiday_profile_page">HolidayProfilePage</string>
+
+    <string-array name="theme_list">
+        <item>Sun Holiday</item>
+        <item>Snow Holiday</item>
+        <item>City Break</item>
+        <item>Countryside</item>
+        <item>Default</item>
+    </string-array>
+
+    <!--Commented by Sinead O'Rourke
+            Above is a string array used in the spinner widget (used in AddHolidayActivity.java file)/-->
+
+
+    <string name="title_activity_maps">Map</string>
+    <string name="zoomInButton">^</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_holiday_shopping_list">HolidayShoppingList</string>
+    <string name="title_activity_holiday_spending_money">HolidaySpendingMoney</string>
+    <string name="title_activity_holiday_saving_status">HolidaySavingStatus</string>
+    <string name="title_activity_holiday_change_theme">HolidayChangeTheme</string>
+    <string name="title_activity_holiday_location">HolidayLocation</string>
+</resources>

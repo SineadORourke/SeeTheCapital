@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="10dp"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sinead.seethecapital.AddHolidayActivity"
+    android:background="@mipmap/main_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="New Holiday Details:"
+        android:id="@+id/newHolidayText"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:typeface="normal"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/destinationText"
+        android:layout_alignStart="@+id/destinationText"
+        android:background="#CCffffff"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/destinationInput"
+        android:layout_marginTop="43dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:background="#ffffff"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/newHolidayText"
+        android:layout_alignLeft="@+id/dateDrawerText"
+        android:layout_alignStart="@+id/dateDrawerText" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/flightPriceInput"
+        android:textAlignment="center"
+        android:background="#ffffff"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/destinationInput"
+        android:layout_alignLeft="@+id/destinationInput"
+        android:layout_alignStart="@+id/destinationInput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Destination:"
+        android:id="@+id/destinationText"
+        android:textSize="22dp"
+        android:textColor="#000000"
+        android:layout_alignTop="@+id/destinationInput"
+        android:layout_alignLeft="@+id/flightPriceText"
+        android:layout_alignStart="@+id/flightPriceText"
+        android:background="#CCffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Travel Price  €"
+        android:id="@+id/flightPriceText"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/flightPriceInput"
+        android:layout_toLeftOf="@+id/flightPriceInput"
+        android:layout_toStartOf="@+id/flightPriceInput"
+        android:background="#CCffffff" />
+
+
+    <CalendarView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:id="@+id/returnCalendar"
+        android:layout_alignTop="@+id/departureCalendar"
+        android:layout_alignRight="@+id/theme_spinner"
+        android:layout_alignEnd="@+id/theme_spinner" />
+
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/cancelButton"
+        android:onClick="backToMainMenu"
+        android:layout_below="@+id/theme_spinner"
+        android:layout_alignLeft="@+id/flightPriceText"
+        android:layout_alignStart="@+id/flightPriceText"
+        android:layout_marginTop="30dp"
+        android:background="#ccb49fd1" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/submitButton"
+        android:onClick="addHoliday"
+        android:layout_gravity="bottom"
+        android:layout_alignTop="@+id/cancelButton"
+        android:layout_toRightOf="@+id/dateDrawerText"
+        android:layout_toEndOf="@+id/dateDrawerText"
+        android:background="#ccb49fd1" />
+
+    <CalendarView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:id="@+id/departureCalendar"
+        android:layout_below="@+id/flightPriceInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="to"
+        android:id="@+id/dateDrawerText"
+        android:layout_alignTop="@+id/returnCalendar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <Spinner
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/theme_spinner"
+        android:layout_below="@+id/returnCalendar"
+        android:layout_alignLeft="@+id/submitButton"
+        android:layout_alignStart="@+id/submitButton"
+        android:layout_marginTop="30dp"
+        android:background="#CCffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Holiday Theme:"
+        android:id="@+id/textView8"
+        android:textSize="22dp"
+        android:layout_below="@+id/departureCalendar"
+        android:layout_alignRight="@+id/flightPriceText"
+        android:layout_alignEnd="@+id/flightPriceText"
+        android:layout_marginTop="30dp" />
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageButton"
+        android:background="@mipmap/qmark"
+        android:layout_above="@+id/departureCalendar"
+        android:layout_alignRight="@+id/newHolidayText"
+        android:layout_alignEnd="@+id/newHolidayText"
+        android:onClick="priceDialog" />
+
+</RelativeLayout>
+
+<!-- Commented by Sinead O'Rourke.
+        This xml file controls the layout of the AddHolidayActivity.java file. It takes in user input in 3 different ways.
+        -The two editText boxes allow the user to type the holiday destination and the travel price
+        -There is an imageButton beside the travel price editText. When it is pressed, an alert dialog box appears with information about the app.
+        -The two calendarViews allow the user to easily input the departure and return date of the holiday
+        -The spinner allows the user the select from 5 different holiday themes (which relate to the type of background that is later set)
+        -Finally, the two buttons allow the user to either add the new information into the database, or to cancel the transaction altogether
+
+        Due to the text colour and some parts of the background, the text was sometimes difficult to read. Some of the textViews have no background
+        where as others have 80% opaqueness on a white background (#CCffffff). /-->

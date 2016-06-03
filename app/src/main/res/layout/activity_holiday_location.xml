@@ -1,0 +1,108 @@
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@mipmap/main_bg"
+    android:id="@+id/holidaylocationbackground">
+
+    <!-- Commented by Tommy Coyne/
+       The linear layout holds the map fragment, the search box, the search button, the map type and both the zoom in and zoom out buttons -->
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- The Edittext search box is set with the TFLocale id and is where the user enters their search term -->
+
+        <EditText
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/TFlocale" />
+
+        <!-- The search button is set with the Bsearch id -->
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEARCH"
+            android:id="@+id/Bsearch"
+            android:layout_gravity="right"
+            android:onClick="onSearch"
+            android:layout_marginTop="20dp" />
+
+        <!-- This sets out the layout for the change map type button -->
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:text="Map Type"
+            android:id="@+id/Btype"
+            android:layout_gravity="right"
+            android:onClick="changeType"
+            android:layout_marginTop="20dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginRight="20dp">
+
+        <!-- This fragment holds the main map activity itself and is set with an id of map which is launched by the Maps.Activity.java file-->
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto" android:layout_width="290dp"
+    android:layout_height="431dp" android:id="@+id/map"
+    tools:context="com.example.sinead.seethecapital.HolidayLocation"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_weight="1.39" />
+
+        <!-- Sets the layout to vertical-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Sets the layout for the zoom in button-->
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="@string/zoomInButton"
+                android:id="@+id/Bzoomin"
+                android:layout_gravity="center_vertical"
+                android:onClick="onZoom" />
+
+            <!-- Sets the layout for the zoom out button-->
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v"
+                android:id="@+id/Bzoomout"
+                android:layout_gravity="center_vertical"
+                android:nestedScrollingEnabled="false"
+                android:onClick="onZoom" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Holiday Profile"
+        android:id="@+id/holidayPButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:onClick="toHolidayProfile" />
+</LinearLayout>

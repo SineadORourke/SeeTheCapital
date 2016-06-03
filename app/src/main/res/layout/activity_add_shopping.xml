@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sinead.seethecapital.AddShopping"
+    android:background="#a0e3e5">
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Save"
+        android:id="@+id/saveShoppingItem"
+        android:onClick="addShoppingItem"
+        android:layout_marginTop="66dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/enterPrice"
+        android:layout_alignStart="@+id/enterPrice" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item:"
+        android:id="@+id/textView2"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/enterItem"
+        android:background="#ffffff"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="43dp"
+        android:layout_marginEnd="43dp"
+        android:textColor="#000000" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/enterPrice"
+        android:background="#ffffff"
+        android:layout_above="@+id/saveShoppingItem"
+        android:layout_alignLeft="@+id/enterItem"
+        android:layout_alignStart="@+id/enterItem"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Price: €"
+        android:id="@+id/textView3"
+        android:textSize="30dp"
+        android:layout_marginTop="54dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Cancel"
+        android:id="@+id/backToShoppingList"
+        android:onClick="backToShoppingList"
+        android:layout_alignTop="@+id/saveShoppingItem"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_marginRight="10dp" />
+
+</RelativeLayout>
+
+<!-- Commented by Sinead O'Rourke.
+        This xml file controls the layout of the AddShopping.java activity, and it is in the style of a dialog box.
+        It has two editText boxes (which allows the user to input the name of a shopping item and its price) and two buttons (which allows the
+        user to save that shopping item in the database, or cancel the transaction altogether) /-->

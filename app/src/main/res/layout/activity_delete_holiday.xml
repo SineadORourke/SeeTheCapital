@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sinead.seethecapital.DeleteHolidayActivity"
+    android:background="@mipmap/main_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pick the Holiday ID that you would like to delete:"
+        android:id="@+id/deleteText"
+        android:textAlignment="center"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="39dp" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/holidayIDInput"
+        android:text="Holiday ID"
+        android:background="#ffffff"
+        android:layout_below="@+id/deleteText"
+        android:layout_alignLeft="@+id/scrollView"
+        android:layout_alignStart="@+id/scrollView"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp"
+        android:onClick="clearBox" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Delete"
+        android:id="@+id/deleteHolidayButton"
+        android:onClick="deleteHoliday"
+        android:layout_below="@+id/deleteText"
+        android:layout_toRightOf="@+id/holidayIDInput"
+        android:layout_toEndOf="@+id/holidayIDInput"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp"
+        android:background="#ccb49fd1" />
+
+    <ScrollView
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:id="@+id/scrollView"
+        android:background="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/deleteText"
+        android:layout_alignEnd="@+id/deleteText">
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Default"
+            android:id="@+id/showDB"
+            android:background="#ffffff"
+            android:textSize="15dp"
+            />
+    </ScrollView>
+
+</RelativeLayout>
+
+<!-- Commented by Sinead O'Rourke.
+        This xml file controls the layout of the DeleteHolidayActivity.java file.
+        -The textView (with id 'showDB') outputs all the holiday items currently in the database. This textView is inbedded in a scrollView which means that
+        the user can view all of the database items even if there are many.
+        -The editText box allows the user to input the holidayID of the holiday they wish to delete
+        -The button allows the user to delete the selected holiday from the database permanently /-->

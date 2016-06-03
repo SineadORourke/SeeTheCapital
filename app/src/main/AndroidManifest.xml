@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sinead.seethecapital" >
+
+    <!-- Commented by Sinead O'Rourke/ -->
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <!-- debuggable = true allows this app to be run on a mobile device/ -->
+
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+        <activity android:name=".SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- The splash screen is the LAUNCHER therefore the first activity to run when the app is opened/ -->
+        <!-- The rest of the activities are DEFAULT, but are embedded in an intent filter, which means that you can move to the various activities when a button is pressed etc./ -->
+        <activity android:name=".MainMenu" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.MainMenu" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddHolidayActivity" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.AddHolidayActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".DeleteHolidayActivity" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.DeleteHolidayActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BankActivity" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.BankActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HolidayProfilePage"
+            android:label="@string/title_activity_holiday_profile_page"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.HolidayProfilePage" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HolidayShoppingList"
+            android:label="@string/title_activity_holiday_shopping_list"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.HolidayShoppingList" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddShopping"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.AddShopping" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- AddShopping is in the style of a dialog box/ -->
+        <activity
+            android:name=".HolidaySpendingMoney"
+            android:label="@string/title_activity_holiday_spending_money"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.HolidaySpendingMoney" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddSpending"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.AddSpending" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- AddSpending is in the style of a dialog box/ -->
+        <activity
+            android:name=".HolidaySavingStatus"
+            android:label="@string/title_activity_holiday_saving_status"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.HolidaySavingStatus" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HolidayChangeTheme"
+            android:label="@string/title_activity_holiday_change_theme"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.HolidayChangeTheme" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            The API key for Google Maps-based APIs had to be retrieved by first logging into the google account
+            and then accessing the developer options. A project was created and api key was registered.
+       -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAaWEK4Wq2Bq3EjvBDsVmzWFx380tJAZZU" />
+
+        <activity
+            android:name=".HolidayLocation"
+            android:label="Map"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="com.example.sinead.seethecapital.HolidayLocation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
+
+

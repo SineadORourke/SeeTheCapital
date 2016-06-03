@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_holiday_saving_status"
+    tools:context="com.example.sinead.seethecapital.HolidaySavingStatus"
+    android:id="@+id/savingstatus">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sleep Default"
+        android:id="@+id/sleepDefault"
+        android:layout_alignRight="@+id/textView12"
+        android:layout_alignEnd="@+id/textView12"
+        android:layout_below="@+id/sleepsOutput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:background="#CCffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sleeps"
+        android:id="@+id/sleepsOutput"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:background="#CCffffff"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amount in a/c:"
+        android:id="@+id/textView10"
+        android:layout_below="@+id/sleepDefault"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="45dp"
+        android:background="#CCffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="€€€"
+        android:id="@+id/accountOutput"
+        android:layout_alignRight="@+id/textView10"
+        android:layout_alignEnd="@+id/textView10"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:background="#CCffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amount needed:"
+        android:id="@+id/textView12"
+        android:layout_above="@+id/needOutput"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#CCffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="€€€"
+        android:id="@+id/needOutput"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/accountOutput"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12"
+        android:textAlignment="center"
+        android:background="#CCffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Amount still to save:"
+        android:id="@+id/congratsText"
+        android:layout_marginTop="37dp"
+        android:layout_below="@+id/needOutput"
+        android:layout_alignRight="@+id/needOutput"
+        android:layout_alignEnd="@+id/needOutput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:background="#CCffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="€€€"
+        android:id="@+id/balanceOutput"
+        android:layout_below="@+id/congratsText"
+        android:textSize="50dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignRight="@+id/congratsText"
+        android:layout_alignEnd="@+id/congratsText"
+        android:layout_alignLeft="@+id/congratsText"
+        android:layout_alignStart="@+id/congratsText"
+        android:textAlignment="center"
+        android:background="#CCffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Save per day:"
+        android:id="@+id/textView16"
+        android:background="#CCffffff"
+        android:layout_below="@+id/balanceOutput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="€€€"
+        android:id="@+id/dayOutput"
+        android:textAlignment="center"
+        android:background="#CCffffff"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView16"
+        android:layout_alignEnd="@+id/textView16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Save per week:"
+        android:id="@+id/textView18"
+        android:background="#CCffffff"
+        android:layout_below="@+id/balanceOutput"
+        android:layout_alignLeft="@+id/needOutput"
+        android:layout_alignStart="@+id/needOutput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="€€€"
+        android:id="@+id/weekOutput"
+        android:textAlignment="center"
+        android:background="#CCffffff"
+        android:layout_below="@+id/textView18"
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18"
+        android:layout_alignRight="@+id/textView18"
+        android:layout_alignEnd="@+id/textView18" />
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageButton7"
+        android:background="@mipmap/qmark"
+        android:onClick="statusDialog"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/textView18"
+        android:layout_alignEnd="@+id/textView18" />
+</RelativeLayout>
+
+
+<!-- Commented by Sinead O'Rourke.
+        This xml file contains the layout for the HolidaySavingStatus.java activity. It consists only of textViews, but these textViews display various figures and calculations
+        made in the java file.
+        -There is an imageButton in the top right corner. When it is pressed, an alert dialog box appears with information about how the app works.
+        -Due to background photos, it was difficult to read the textViews, therefore their backgrounds have been set to 80& white opaqueness.
+        -The background has not been set in the xml file, as it will be determined in the java file /-->

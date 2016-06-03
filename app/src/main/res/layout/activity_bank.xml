@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.sinead.seethecapital.BankActivity"
+    android:background="@mipmap/main_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Your Bank A/C:"
+        android:id="@+id/bankText"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        android:typeface="monospace"
+        android:layout_above="@+id/inputBank"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Current Balance:"
+        android:id="@+id/currentBalanceText"
+        android:textSize="30dp"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/addBank"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="€€€€€"
+        android:id="@+id/balanceOutput"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/currentBalanceText"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/inputBank"
+        android:background="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/addBank"
+        android:layout_alignTop="@+id/subtractBank"
+        android:layout_alignLeft="@+id/inputBank"
+        android:layout_alignStart="@+id/inputBank"
+        android:onClick="addToBank"
+        android:background="#ccb49fd1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtract"
+        android:id="@+id/subtractBank"
+        android:onClick="subtractFromBank"
+        android:background="#ccb49fd1"
+        android:layout_below="@+id/inputBank"
+        android:layout_alignRight="@+id/currentBalanceText"
+        android:layout_alignEnd="@+id/currentBalanceText" />
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageButton2"
+        android:background="@mipmap/qmark"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/bankText"
+        android:layout_toEndOf="@+id/bankText"
+        android:onClick="bankDialog" />
+
+</RelativeLayout>
+
+
+<!--Commented by Sinead O'Rourke.
+        This xml file controls the layout of the BankActivity.java file, and it displays a simulated bank account.
+        -There is an imageButton in the top right corner. When it is pressed, an alert dialog box appears with information about how to use the app.
+        -The editText box allows the user to input a number
+        -The user has a choice of two buttons, to either add or subtract the inputted number from the simulated bank account
+        -The textView (with id 'balanceOutput') gets the bank account figure that is saved in the database and displays that number on screen /-->

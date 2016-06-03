@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_holiday_spending_money"
+    tools:context="com.example.sinead.seethecapital.HolidaySpendingMoney"
+    android:id="@+id/spendingmoney">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Spending Money"
+        android:id="@+id/spendingText"
+        android:layout_marginTop="60dp"
+        android:textSize="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/Scroller"
+        android:layout_alignEnd="@+id/Scroller"
+        android:background="#CCffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to Spending Budget"
+        android:id="@+id/addToSpending"
+        android:layout_marginTop="41dp"
+        android:onClick="toAddSpending"
+        android:layout_below="@+id/spendingText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/spendingIdInput"
+        android:background="#ffffff"
+        android:text="Item ID"
+        android:layout_below="@+id/addToSpending"
+        android:layout_alignLeft="@+id/addToSpending"
+        android:layout_alignStart="@+id/addToSpending" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Item"
+        android:id="@+id/deleteSpendingButton"
+        android:onClick="deleteSpending"
+        android:layout_below="@+id/addToSpending"
+        android:layout_toRightOf="@+id/spendingIdInput"
+        android:layout_toEndOf="@+id/spendingIdInput" />
+
+
+    <ScrollView
+        android:id="@+id/Scroller"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:layout_below="@+id/deleteSpendingButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_weight="1.0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:id="@+id/showSpendingDB"
+            android:background="#ffffff"
+            android:layout_below="@+id/deleteSpendingButton"
+            android:layout_alignLeft="@+id/Scroller"
+            android:layout_alignStart="@+id/Scroller" />
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageButton6"
+        android:background="@mipmap/qmark"
+        android:onClick="spendingDialog"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/spendingText"
+        android:layout_alignEnd="@+id/spendingText" />
+
+</RelativeLayout>
+
+    <!-- Commented by Sinead O'Rourke.
+            This xml file controls the layout of the HolidaySpendingMoney.java activity.
+            -There is an imageButton in the top right corner. When it is pressed, an alert dialog box appears with information about how to use the app.
+            -The textView (with id 'showSpendingDB') displays only the spending money items from the Spending Money database table which correspond to the holiday selected.
+            -The above textView is embedded in a ScrollView, which means that the user can input as many items into the Spending Money table and they will all be visible.
+            -The editText box allows the user to input a spending money item id.
+            -The button (with id 'deleteSpendingButton') allows the user to delete the selected spending money item from the database
+            -Another button (with id 'addToSpending') brings the user to the AddSpending.java activity.
+            -The background is not set in the xml file, as it is determined in the java file. /-->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/holiday_profile"
+            android:title="Holiday Profile" />
+        <item android:id="@+id/shopping_list"
+            android:title="Shopping List" />
+        <item android:id="@+id/spending_money"
+            android:title="Spending Money" />
+        <item android:id="@+id/bank_account"
+            android:title="Bank Account Status" />
+        <item android:id="@+id/change_theme"
+            android:title="Change Theme" />
+        <item android:id="@+id/holiday_location"
+            android:title="Holiday Location" />
+        <item android:id="@+id/main_menu"
+            android:title="Back to Main Menu" />
+    </group>
+</menu>
+
+    <!-- Commented by Sinead O'Rourke
+            This xml file holds all of the possible items in the Navigation drawer menu. These are the options given to the user when they slide the drawer open.
+            Due to the checkableBehaviour, the user can only choose one option at a time/-->

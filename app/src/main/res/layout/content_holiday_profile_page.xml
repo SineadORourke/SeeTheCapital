@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_holiday_profile_page"
+    tools:context="com.example.sinead.seethecapital.HolidayProfilePage"
+    android:id="@+id/holidayprofile">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Default"
+        android:id="@+id/holidayNameText"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="211dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ONLY"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/holidayNameText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SLEEPS"
+        android:id="@+id/holidaycountdown"
+        android:textSize="50dp"
+        android:layout_below="@+id/textView9"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="MORE SLEEPS!"
+        android:id="@+id/textView13"
+        android:layout_below="@+id/holidaycountdown"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:layout_alignRight="@+id/textView9"
+        android:layout_alignEnd="@+id/textView9" />
+
+    <ImageButton
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:id="@+id/imageButton4"
+        android:background="@mipmap/qmark"
+        android:onClick="profileDialog"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9" />
+</RelativeLayout>
+
+
+<!-- Commented by Sinead O'Rourke.
+        This xml file contains the various textViews for the HolidayProfilePage.java activity.
+        -There is an imageButton in the top right corner. When it is pressed, an alert dialog box appears with information about how to use the app.
+        -one of the textViews (with id 'holidayNameText') displays the name of the holiday that was selected in the main menu
+        -another textView (with id 'holidaycountdown') displays the amount of days left until the departure date
+        -no background has been set in this xml file as it will be determined in the java file. /-->

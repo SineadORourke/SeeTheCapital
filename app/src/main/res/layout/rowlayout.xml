@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="DEFAULT"
+        android:id="@+id/holidayRowName"
+        android:layout_weight="0.03"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
+<!-- Commented by Sinead O'Rourke.
+        This xml file controls the custom font/style of each item in the listView (MainMenu.java).
+        The holiday names are in bold to make them stand out from the other widgets/textViews in the Main Menu/-->
