@@ -1,2 +1,2 @@
 # SeeTheCapital
-Banking App made with Android Studio
+Banking App made by team of two using Android Studio
